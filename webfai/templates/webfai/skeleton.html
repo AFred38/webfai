@@ -1,0 +1,35 @@
+{% load staticfiles %}
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>WebFAI v3.0</title>
+    {% block css %}
+		{# Default CSS declaration #}
+          <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+          <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+          <link rel="stylesheet" href="{% static 'webfai/css/fonts.css' %}">
+          <link rel="stylesheet" href="{% static 'webfai/css/webfai.css' %}">
+    {% endblock %}
+    {% block js %}
+    {% endblock %}
+  </head>
+  <body>
+    <div id="page" >
+      <div id="header">
+        {% block header %}
+        {% include "webfai/header.html" %}
+        {% endblock %}
+      </div>
+      <div id="content">
+        {% block content %}
+        <h3>Voici mon application : </h3>
+        {% endblock %}
+      </div>
+      <div id="footer">
+        {% block footer %}
+        {% include "webfai/footer.html" %}
+        {% endblock %}
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,149 @@
+body {
+	background-color: #E3E3E3;
+        font-family: open_sansregular,"Trebuchet MS", Helvetica, sans-serif;
+        font-size: 1.2em;
+        font-color: #333;
+
+}
+/*______ Adaptative Display ______ */
+
+@media screen and (min-width:1010px) {
+#page {
+width: 1020px;}
+
+}
+
+@media screen and (max-width:1009px) {
+#page {
+	width: 740px;
+}
+}
+
+/*______ End Adaptative Display ______ */
+
+#header {
+	background-color: rgba(128,128,128,.6);
+	#border: 1px solid grey;
+	display: block;
+	min-height: 6em;
+}	
+#header h1 {
+	display: inline-block;
+	margin: .5em;
+}
+.logo {
+	display: inline-block;
+	#width: 250px;
+	height: 100%;
+	float: right;
+	border: 1px solid black;
+}
+.hpanel {
+        display: inline-block;
+        width: 100px;
+        height: 80px;
+        float: right;
+        border: 1px solid pink;
+}
+#footer{
+	background: #CCCCCC;
+	min-height: 6em;
+	color: #333;
+	padding: 1em;
+	position:absolute;
+	bottom:0;
+	left: 0;
+	width: 100%;
+	padding-top: 2em;
+}
+
+#page {
+	margin: 2em auto;
+	padding: 0 0;
+	#border: 1px solid red;
+	background-color: rgba(255,255,255,.5);
+}
+#content {}
+
+#content h1 {
+	font-size: 1.8em;
+	color: red;}
+
+.tablo {
+	border-collapse: collapse;
+}
+
+.tablo, .cell, .line {
+	border: 1px solid grey;
+}
+.cell {
+	padding: 0 .5em;
+	min-width: 4.5em;
+}
+
+.linepanel {
+}
+
+.line:nth-child(odd) {
+	background-color: rgba(128,128,128,.2);
+}
+
+.headerline {
+	background-color: rgba(128,128,128,0.8);
+	color: white;
+}
+
+.bouton {
+	display: inline-block;
+	min-width: 23.7%;
+	height:1.8em;
+	text-align: center;
+	padding: 0 2%;
+}
+
+.bouton:hover {
+	background-color: rgba(0,0,0,.2);
+	color: white;}
+.modify{
+	background-color: rgba(128,128,128,.7);
+	color: white;
+}
+.clone{
+	background-color: rgba(128,128,128,.4);
+	color: white;
+}
+.delete{
+	background-color: rgba(255,0,0,.9);
+	color: white;
+}
+.wakeup{
+	background-color: rgba(0,255,0,.5);
+	color: white;
+}
+
+/*----- Formulaires -----*/
+label {
+
+	min-width:15em;	
+	float: left;
+	clear: left;
+}
+
+fieldset {
+	border:1px solid white;
+	background-color: rgba(2555,255,255,.9);
+	padding: 1em;
+	margin: 0 1em;
+}
+legend {
+	font-size:1.5em;
+	border:1px solid pink;
+	border-radius:.5em;
+	display: block;
+	margin-bottom: 0em;
+	width: none;
+}
+input,select {
+	display: block;
+	float: left;
+}

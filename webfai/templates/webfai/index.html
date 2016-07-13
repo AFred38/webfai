@@ -1,0 +1,35 @@
+{% extends "webfai/skeleton.html" %}
+
+{% block content %}
+<h1>Parc :</h1>
+<table class="tablo">
+        <tr class="headerline">
+                <th class="cell">Nom</th>
+                <th class="cell">Adresse MAC</th>
+                <th class="cell">Archi.</th>
+                <th class="cell">Distribution</th>
+                <th class="cell">Action</th>
+                <th class="cell">Profil</th>
+                <th class="cell">Equipe</th>
+                <th class="cell">Clavier</th>
+                <th class="cell">OpenGL</th>
+                <th class="cell">Auth.</th>
+                <th class="cell">Actions</th>
+	</tr>
+{% for m in Liste_parc %}
+	<tr class="line">
+		<td class="cell">{{ m.name }}</td>
+		<td class="cell">{{ m.addr }}</td>
+		<td class="cell">{{ m.archi }}</td>
+		<td class="cell">{{ m.distri }}</td>
+		<td class="cell">{{ m.action }}</td>
+		<td class="cell">{{ m.profil }}</td>
+		<td class="cell">{{ m.equipe }}</td>
+		<td class="cell">{{ m.clavier }}</td>
+		<td class="cell">{{ m.gl_drivers }}</td>
+		<td class="cell">{{ m.auth }}</td>
+		<td class="linepanel"><a href="{% url 'wakeup' m.pk %}" class="bouton wakeup">W</a><a href="{% url 'modify' m.pk %}" class="bouton modify">M</a><a href="{% url 'clone' m.pk %}" class="bouton clone">C</a> <a href="{% url 'delete' m.pk %}" class="bouton delete">S</a></td>
+	</tr>
+{% endfor %}
+</td>
+{% endblock %}
