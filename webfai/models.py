@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 from django.db import models
 from django.forms import ModelForm
+from django.core.urlresolvers import reverse
 
 # Create your models here.
 from django.utils.encoding import python_2_unicode_compatible
@@ -81,9 +82,12 @@ class Machine(models.Model):
         gl_drivers = models.BooleanField(default=False, verbose_name="Drivers Nvidia OpenGL")
         def __str__(self):
                 return self.name
+	def get_absolute_url(self):
+		return reverse('details',kwargs={'pk':self.pk})
 
 class MachineForm(ModelForm):
         class Meta:
                 model = Machine
                 #fields = ['name', 'addr', 'archi', 'distri', 'action', 'profil', 'equipe', 'clavier', 'wm', 'gl_drivers', 'auth' ]
                 fields = '__all__'
+

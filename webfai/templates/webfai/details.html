@@ -1,0 +1,33 @@
+{% extends "webfai/skeleton.html" %}
+
+{% block content %}
+<h1>{{ machine.name }} :</h1>
+<table class="tablo">
+        <tr class="headerline">
+                <th class="cell">Nom</th>
+                <th class="cell">Adresse MAC</th>
+                <th class="cell">Archi.</th>
+                <th class="cell">Distribution</th>
+                <th class="cell">Action</th>
+                <th class="cell">Profil</th>
+                <th class="cell">Equipe</th>
+                <th class="cell">Clavier</th>
+                <th class="cell">OpenGL</th>
+                <th class="cell">Auth.</th>
+                <th class="cell">Actions</th>
+	</tr>
+	<tr class="line">
+		<td class="cell">{{ machine.name }}</td>
+		<td class="cell">{{ machine.addr }}</td>
+		<td class="cell">{{ machine.archi }}</td>
+		<td class="cell">{{ machine.distri }}</td>
+		<td class="cell">{{ machine.action }}</td>
+		<td class="cell">{{ machine.profil }}</td>
+		<td class="cell">{{ machine.equipe }}</td>
+		<td class="cell">{{ machine.clavier }}</td>
+		<td class="cell">{% if not machine.gl_drivers %} - {% else %} &#10004; {% endif %}</td>
+		<td class="cell">{{ machine.auth }}</td>
+		<td class="linepanel"><a href="{% url 'wakeup' machine.pk %}" class="bouton wakeup">W</a><a href="{% url 'modify' machine.pk %}" class="bouton modify">M</a><a href="{% url 'clone' machine.pk %}" class="bouton clone">C</a> <a href="{% url 'delete' machine.pk %}" class="bouton delete">S</a></td>
+	</tr>
+</table>
+{% endblock %}

@@ -3,7 +3,14 @@
 {% block content %}
 
 <br>
+<form method="post" action="{% url 'modified' pk %}">{% csrf_token %}
+
 <fieldset>
-	{{ machine }}	
+	{{ machine.as_p }}
+	<div class="controls"><input type="reset" class="cancel" value="X" title="Annuler"> <input type="submit" class="ok" value="M" title="Modifier">
+	</div>
 </fieldset>
+
+</form>
+
 {% endblock %}

@@ -84,7 +84,7 @@ DATABASES = {
         'NAME': 'djangofred',
         'USER': 'fred',
         'PASSWORD': 'golemfoo',
-
+	'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
     }
 }
 

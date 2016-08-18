@@ -1,6 +1,11 @@
 {% extends "webfai/skeleton.html" %}
 
 {% block content %}
-Suppression de {{ machine_name }} demandé, merci de patienter.
+Suppression de {{ machine.name }} demandée, êtes vous sûr ?
 <br>
+<form method="post" action="{% url 'deleted' machine.pk %}">{% csrf_token %}
+	<input type=reset class="annule" value="Non"> <input type=submit class="valide" value="Confirmer">
+</form>
+
+PK : {{ machine.pk }}
 {% endblock %}
