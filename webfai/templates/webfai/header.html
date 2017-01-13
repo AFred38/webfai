@@ -1,4 +1,5 @@
 {% block header %}
-	<h1><a href="{% url 'index' %}">Webfai</a></h1>
-	<div class="logo"> logo </div>
+	{% load static %}
+	<h1>Infos</h1>
+	<div class="logo"><a href="{% url 'index' %}"><img src="{% static 'webfai/img/logo_webFAI.svg' %}"></img></a></div>
 {% endblock%}

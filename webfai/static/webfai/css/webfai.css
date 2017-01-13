@@ -34,11 +34,17 @@ width: 1020px;}
 }
 .logo {
 	display: inline-block;
-	#width: 250px;
-	height: 100%;
+	width: 250px;
+	max-height: 6em;
 	float: right;
-	border: 1px solid black;
+	/*border: 1px solid black;*/
 }
+.logo img {
+	max-height: 6em;
+	display: inline-block;
+	float: right;
+}
+
 .hpanel {
         display: inline-block;
         width: 100px;
@@ -72,9 +78,11 @@ width: 1020px;}
 	font-size: 1.8em;
 	color: red;}
 
-.tablo {
-	border-collapse: collapse;
+.tablo, .tablo tbody {
+	/*border-collapse: collapse;
 	display: inline-block;
+	box-sizing: border-box;*/
+	width: 100%;
 }
 
 .cell, .line {
@@ -86,6 +94,7 @@ width: 1020px;}
 }
 
 .linepanel {
+	
 }
 
 .line:nth-child(odd) {
@@ -99,10 +108,12 @@ width: 1020px;}
 
 .bouton {
 	display: inline-block;
-	min-width: 23.7%;
+	float: left;
+	/*min-width: 15px;*/
 	height:1.8em;
 	text-align: center;
-	padding: 0 2%;
+	padding: 0 0.5em;
+	margin: 0;
 }
 
 .bouton:hover {
